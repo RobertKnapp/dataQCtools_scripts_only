@@ -24,6 +24,18 @@ croppedplots_loc <- paste0(base_loc, "2_cropped_plots/")
 # name of your LDRTimes file that has the lookup table with deployment/retrieval dates
 ldrtimes_fn <- "LDRTimes_summer22.xlsx"
 
+# check in base location (base_loc) for folders 2_cropped_csv & 2_cropped_plots
+# if they exist skip. If they don't exist create directories with these names.
+
+# Check and create the "2_cropped_csv" folder
+if (!file.exists(file.path(base_loc, "2_cropped_csv"))) {
+  dir.create(file.path(base_loc, "2_cropped_csv"))
+}
+
+# Check and create the "2_cropped_plots" folder
+if (!file.exists(file.path(base_loc, "2_cropped_plots"))) {
+  dir.create(file.path(base_loc, "2_cropped_plots"))
+}
 
 # check that R can find your raw data files
 # Get all temperature data filenames
